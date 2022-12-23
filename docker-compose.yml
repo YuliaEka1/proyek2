@@ -3,7 +3,7 @@ services:
   app:
     build:
       args:
-        user: ian
+        user: '1012'
         uid: 1000
       context: ./
       dockerfile: Dockerfile
@@ -40,7 +40,7 @@ services:
       - 8000:80
     volumes:
       - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - ./docker/nginx:/etc/nginx/conf.d/
     networks:
       - gallery
 
